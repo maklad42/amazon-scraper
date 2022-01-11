@@ -78,7 +78,6 @@ async function scrapePage(page) {
         title: 'Help',
         // productID: productID,
       });
-      debugger;
     });
     return itemList;
   });
