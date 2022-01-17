@@ -3,7 +3,6 @@ const fs = require('fs');
 
 // Load the JSON file
 let prices = JSON.parse(fs.readFileSync('./data/sample_220115.json'));
-console.log(prices[0]['prices']);
 
 const CronJob = require('cron').CronJob;
 const nodemailer = require('nodemailer');
@@ -61,7 +60,7 @@ const nodemailer = require('nodemailer');
   const len = urls.length;
   let dt = new Date();
   console.log(typeof dt);
-  console.log(dt);
+  let msecs = dt.getTime();
   let yyyy = dt.getFullYear();
   let mm = dt.getMonth() + 1;
   let dd = dt.getDate();
@@ -98,235 +97,241 @@ const nodemailer = require('nodemailer');
     {
       title:
         'Digital Minimalism: Choosing a Focused Life in a Noisy World (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'The Hero of Ages: Mistborn Book Three (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'The Well of Ascension: Mistborn Book Two (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Jade Legacy (The Green Bone Saga Book 3) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'The Art of Readable Code: Simple and Practical Techniques for Writing Better Code (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Blood of Elves (The Witcher Book 3) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Sword of Destiny (The Witcher Book 2) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'The Last Wish: Introducing the Witcher (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         '100 Things Every Designer Needs to Know About People (Voices That Matter) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Flux: 8 Superpowers for Thriving in Constant Change (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Grit: The Power of Passion and Perseverance (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'At Your Best: How to Get Time, Energy, and Priorities Working in Your Favor (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'React: Up & Running (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'React Design Patterns and Best Practices: Design, build and deploy production-ready web applications using standard industry practices, 2nd Edition (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'ReactJS by Example - Building Modern Web Applications with React (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Children of Ruin (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Children of Time (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'The Lies of Locke Lamora: The Gentleman Bastard Sequence, Book One (Gentleman Bastards 1) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'The Fifth Season (The Broken Earth Book 1) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'The Poppy War: Tik Tok showed me this award-winning historical fantasy trilogy (The Poppy War, Book 1) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Ship of Magic (Liveship Traders Trilogy Book 1) (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Eat That Frog!: 21 Great Ways to Stop Procrastinating and Get More Done in Less Time (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses (English Edition)",
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: "The Artist's Way: 25th Anniversary Edition ",
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Digital Minimalism: Choosing a Focused Life in a Noisy World (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         "So Good They Can't Ignore You: Why Skills Trump Passion in the Quest for Work You Love (English Edition)",
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Steve Jobs: The Exclusive Biography (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'How Will You Measure Your Life? (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'Thinking, Fast and Slow (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Start with Why: How Great Leaders Inspire Everyone to Take Action (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Our Mathematical Universe: My Quest for the Ultimate Nature of Reality (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title: 'The Body: A Guide for Occupants (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Tools Of Titans: The Tactics, Routines, and Habits of Billionaires, Icons, and World-Class Performers (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
     {
       title:
         'Finding Your Element: How to Discover Your Talents and Passions and Transform Your Life (English Edition)',
-      date_obj: dt,
+      date_msecs: msecs,
       date_txt: `${yyyy}/${mm}/${dd}`,
       price: Math.floor(Math.random() * 2500 + 1),
     },
   ];
 
-  console.log({ results });
+  // console.log({ results });
+
+  console.log(
+    results.find(
+      (o) => o.title === 'The Body: A Guide for Occupants (English Edition)'
+    )
+  );
 
   // ToDo: Loop over the results and add latest price data to JSON
   //       Use the 'title' as a key and save the price and date data
